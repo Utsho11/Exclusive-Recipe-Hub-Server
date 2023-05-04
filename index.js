@@ -11,6 +11,11 @@ app.get('/',(req,res) => {
 res.send('server is running')
 })
 
+app.get('/chef',(req,res) => {
+    res.send(chef)
+    })
+    
+    
 
 
 app.listen(port,() =>{
