@@ -16,6 +16,10 @@ app.get('/chef',(req,res) => {
     })
     
     
+       
+       app.get('/recipes',(req,res) => {
+       res.send(recipes)
+       })
 
 
 app.listen(port,() =>{
