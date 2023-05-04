@@ -15,7 +15,11 @@ app.get('/chef',(req,res) => {
     res.send(chef)
     })
     
-    
+    app.get('/chef/:id',(req,res) => {
+        const id = req.params.id;
+        const selectedRecipes = recipes.filter(recipeId => recipeId.Chef_category == id)
+        res.send(selectedRecipes)
+       }) 
        
        app.get('/recipes',(req,res) => {
        res.send(recipes)
